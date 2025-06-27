@@ -41,16 +41,18 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
+            <a href="#contacto">
             <Button
               size="lg"
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-4 text-lg rounded-md shadow-lg hover:shadow-xl transition-all duration-200 border-0"
             >
               Solicitar presupuesto
             </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-black text-white hover:bg-green-500 hover:text-white hover:border-green-500 px-8 py-4 text-lg font-bold rounded-md shadow-lg hover:shadow-xl transition-all duration-200 bg-transparent"
+              className="border-2 border-black text-white hover:bg-green-500 hover:text-white hover:border-yellow-500 px-8 py-4 text-lg font-bold rounded-md shadow-lg hover:shadow-xl transition-all duration-200 bg-transparent"
               style={{
                 backgroundColor: "rgba(0, 0, 0, 0.4)",
                 boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",

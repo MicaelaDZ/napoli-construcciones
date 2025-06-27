@@ -33,9 +33,11 @@ export function AboutSection() {
             </div>
 
             <div className="mt-8">
+              <a href="#contacto">
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-3">
                 Contáctanos
               </Button>
+              </a>
             </div>
           </div>
 
