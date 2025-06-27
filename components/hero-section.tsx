@@ -26,7 +26,7 @@ export function HeroSection() {
                 textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.3)",
               }}
             >
-              Construimos tu futuro adasdasd
+              Construimos tu futuro
             </span>
           </h1>
 
