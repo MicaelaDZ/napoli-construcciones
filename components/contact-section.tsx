@@ -71,6 +71,15 @@ export function ContactSection() {
       className="py-20 bg-white"
     >
       <div className="container mx-auto px-4">
+        {/* Título y subtítulo */}
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-black via-black to-yellow-300 bg-clip-text text-transparent">
+            Descubre cómo podemos transformar tus espacios
+          </h2>
+          <p className="text-lg text-gray-600">
+            Más de 20 años de experiencia y compromiso en construcción, reformas y diseño. Nos dedicamos a crear ambientes funcionales y estéticos, acompañando a cada cliente en el proceso de mejorar y renovar su hogar o negocio.
+          </p>
+        </div>
         <div className="max-w-6xl mx-auto rounded-2xl shadow-xl bg-white p-8 md:p-12 flex flex-col md:flex-row gap-8">
           {/* Formulario */}
           <form className="flex-1 space-y-6" onSubmit={handleSubmit}>
