@@ -49,6 +49,8 @@ export function HeroSection() {
               Solicitar presupuesto
             </Button>
             </a>
+            <a href="#proyectos">
+
             <Button
               size="lg"
               variant="outline"
@@ -60,6 +62,7 @@ export function HeroSection() {
             >
               Ver proyectos
             </Button>
+             </a>
           </div>
         </div>
       </div>
