@@ -57,18 +57,12 @@ export function ProjectsSection() {
   return (
     <section
       id="proyectos"
-      className="py-20 relative"
-      style={{
-        backgroundImage: `url('/images/asphalt-texture.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="py-40 relative"
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Nuestros Proyectos</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">Nuestros Proyectos</h2>
+          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
             Descubre nuestras obras más destacadas y la calidad de nuestro trabajo.
           </p>
         </div>
@@ -76,7 +70,7 @@ export function ProjectsSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Construcción Residencial con carrusel */}
           <Link href="/proyectos/residencial" className="group cursor-pointer block">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center">
+            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white">
               <Image
                 src={residencialImages[currentResidencial].src}
                 alt={residencialImages[currentResidencial].alt}
@@ -84,20 +78,20 @@ export function ProjectsSection() {
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-black">
                 <h3 className="text-2xl font-semibold mb-2">Construcción Residencial</h3>
-                <p className="text-sm text-gray-300">Obras en viviendas familiares</p>
+                <p className="text-sm text-gray-800">Obras en viviendas familiares</p>
               </div>
             </div>
           </Link>
           {/* Espacios Exteriores con carrusel */}
           <Link href="/proyectos/exteriores" className="group cursor-pointer block">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center">
+            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white">
               {/* Carrusel */}
               <button
                 onClick={(e) => { e.preventDefault(); handlePrevExterior(); }}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-20 hover:bg-black/70"
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/10 text-black rounded-full p-2 z-20 hover:bg-black/30"
                 aria-label="Anterior"
                 type="button"
               >
@@ -110,14 +104,14 @@ export function ProjectsSection() {
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-black">
                 <h3 className="text-2xl font-semibold mb-2">Espacios Exteriores</h3>
-                <p className="text-sm text-gray-300">Piscinas, patios y jardines</p>
+                <p className="text-sm text-gray-800">Piscinas, patios y jardines</p>
               </div>
               <button
                 onClick={(e) => { e.preventDefault(); handleNextExterior(); }}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-20 hover:bg-black/70"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/10 text-black rounded-full p-2 z-20 hover:bg-black/30"
                 aria-label="Siguiente"
                 type="button"
               >
@@ -128,7 +122,7 @@ export function ProjectsSection() {
                 {exteriorImages.map((_, idx) => (
                   <span
                     key={idx}
-                    className={`w-2 h-2 rounded-full ${idx === currentExterior ? 'bg-white' : 'bg-white/40'}`}
+                    className={`w-2 h-2 rounded-full ${idx === currentExterior ? 'bg-black' : 'bg-black/20'}`}
                   />
                 ))}
               </div>
@@ -136,11 +130,11 @@ export function ProjectsSection() {
           </Link>
           {/* Obras Comerciales con carrusel */}
           <Link href="/proyectos/comerciales" className="group cursor-pointer block">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center">
+            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white">
               {/* Carrusel */}
               <button
                 onClick={(e) => { e.preventDefault(); handlePrevCommercial(); }}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-20 hover:bg-black/70"
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/10 text-black rounded-full p-2 z-20 hover:bg-black/30"
                 aria-label="Anterior"
                 type="button"
               >
@@ -153,14 +147,14 @@ export function ProjectsSection() {
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
+              <div className="absolute bottom-4 left-4 text-black">
                 <h3 className="text-2xl font-semibold mb-2">Obras Comerciales</h3>
-                <p className="text-sm text-gray-300">Locales, oficinas y espacios públicos</p>
+                <p className="text-sm text-gray-800">Locales, oficinas y espacios públicos</p>
               </div>
               <button
                 onClick={(e) => { e.preventDefault(); handleNextCommercial(); }}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 text-white rounded-full p-2 z-20 hover:bg-black/70"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/10 text-black rounded-full p-2 z-20 hover:bg-black/30"
                 aria-label="Siguiente"
                 type="button"
               >
@@ -171,7 +165,7 @@ export function ProjectsSection() {
                 {commercialImages.map((_, idx) => (
                   <span
                     key={idx}
-                    className={`w-2 h-2 rounded-full ${idx === currentCommercial ? 'bg-white' : 'bg-white/40'}`}
+                    className={`w-2 h-2 rounded-full ${idx === currentCommercial ? 'bg-black' : 'bg-black/20'}`}
                   />
                 ))}
               </div>
@@ -179,8 +173,6 @@ export function ProjectsSection() {
           </Link>
         </div>
       </div>
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
     </section>
   )
 }
