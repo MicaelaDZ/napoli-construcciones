@@ -80,7 +80,12 @@ export function ContactSection() {
             Más de 20 años de experiencia y compromiso en construcción, reformas y diseño. Nos dedicamos a crear ambientes funcionales y estéticos, acompañando a cada cliente en el proceso de mejorar y renovar su hogar o negocio.
           </p>
         </div>
-        <div className="max-w-6xl mx-auto rounded-2xl shadow-xl bg-white p-8 md:p-12 flex flex-col md:flex-row gap-8">
+        <div 
+          className="max-w-6xl mx-auto rounded-2xl bg-white p-8 md:p-12 flex flex-col md:flex-row gap-8"
+          style={{
+            boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 -10px 25px -5px rgba(0, 0, 0, 0.1), 0 -10px 10px -5px rgba(0, 0, 0, 0.04)'
+          }}
+        >
           {/* Formulario */}
           <form className="flex-1 space-y-6" onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 gap-4">

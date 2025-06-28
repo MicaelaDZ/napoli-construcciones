@@ -57,15 +57,30 @@ export function ProjectsSection() {
   return (
     <section
       id="proyectos"
-      className="py-40 relative"
+      className="pt-10 relative"
     >
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">Nuestros Proyectos</h2>
-          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
-            Descubre nuestras obras más destacadas y la calidad de nuestro trabajo.
-          </p>
+        {/* Título de la sección */}
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-xl min-h-[320px] flex items-center justify-center mb-16">
+          {/* Imagen de fondo desenfocada y oscurecida */}
+          <div className="absolute inset-0">
+            <img
+              src="/images/moka-frente.jpg"
+              alt="Nuestros Proyectos"
+              className="w-full h-full object-cover blur-sm brightness-75"
+              style={{ filter: 'blur(4px) brightness(0.7)' }}
+            />
+            <div className="absolute inset-0 bg-[#FFF9E5] opacity-80" />
+          </div>
+          {/* Contenido */}
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 md:py-24 w-full max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 drop-shadow-lg">Nuestros Proyectos</h2>
+            <p className="text-lg md:text-xl text-black leading-relaxed drop-shadow-md">
+              Descubre nuestras obras más destacadas y la calidad de nuestro trabajo en construcción residencial, espacios exteriores y obras comerciales.
+            </p>
+          </div>
         </div>
+        
         {/* Projects Categories Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {/* Construcción Residencial con carrusel */}

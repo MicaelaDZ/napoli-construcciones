@@ -5,9 +5,30 @@ export function AboutSection() {
   return (
     <section
       id="nosotros"
-      className="py-20 bg-white"
+      className="py-20 pt-32 bg-white"
     >
       <div className="container mx-auto px-4">
+        {/* Título de la sección */}
+        <div className="relative w-full rounded-2xl overflow-hidden shadow-xl min-h-[320px] flex items-center justify-center mb-16">
+          {/* Imagen de fondo desenfocada y oscurecida */}
+          <div className="absolute inset-0">
+            <img
+              src="/images/bloque-nosotros-1.jpg"
+              alt="Sobre Nosotros"
+              className="w-full h-full object-cover blur-sm brightness-75"
+              style={{ filter: 'blur(4px) brightness(0.7)' }}
+            />
+            <div className="absolute inset-0 bg-[#FFF9E5] opacity-80" />
+          </div>
+          {/* Contenido */}
+          <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 md:py-24 w-full max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 drop-shadow-lg">Sobre Nosotros</h2>
+            <p className="text-lg md:text-xl text-black leading-relaxed drop-shadow-md">
+              Más de dos décadas construyendo sueños y transformando espacios. Conoce nuestra historia, valores y el equipo que hace posible cada proyecto.
+            </p>
+          </div>
+        </div>
+        
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Fila 1 */}
           {/* Imagen 1 */}
