@@ -8,11 +8,11 @@ export function ProjectsSection() {
   // Carrusel para Obras Comerciales
   const commercialImages = [
     {
-      src: "/images/moka-frente.jpg",
+      src: "/images/locales/moka-frente.jpg",
       alt: "Moka Café - Frente",
     },
     {
-      src: "/images/terrazas-frente.jpeg",
+      src: "/images/locales/terrazas-frente.jpeg",
       alt: "Terrazas de Ezeiza - Frente",
     },
   ];
@@ -28,11 +28,11 @@ export function ProjectsSection() {
   // Carrusel para Espacios Exteriores
   const exteriorImages = [
     {
-      src: "/images/exterior-frente.jpeg",
+      src: "/images/exteriores/exterior-frente.jpeg",
       alt: "Espacio Exterior 1",
     },
     {
-      src: "/images/exterior2-frente.jpg",
+      src: "/images/exteriores/exterior2-frente.jpg",
       alt: "Espacio Exterior 2",
     },
   ];
@@ -48,7 +48,7 @@ export function ProjectsSection() {
   // Carrusel para Residencial
   const residencialImages = [
     {
-      src: "/images/residencial1-frente.jpg",
+      src: "/images/residenciales/residencial1-frente.jpg",
       alt: "Residencial 1",
     },
   ];
@@ -74,9 +74,10 @@ export function ProjectsSection() {
                 className="object-cover"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
               <div className="relative z-10 p-6 w-full text-left">
-                <h3 className="text-2xl font-bold mb-1 text-black">Construcción Residencial</h3>
+                <h3 className="text-2xl font-bold mb-1 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7)'}}>
+                  Construcción Residencial
+                </h3>
                 <p className="text-base text-gray-700">Obras en viviendas familiares</p>
               </div>
             </div>
@@ -100,9 +101,10 @@ export function ProjectsSection() {
                 className="object-cover"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
               <div className="relative z-10 p-6 w-full text-left">
-                <h3 className="text-2xl font-bold mb-1 text-black">Espacios Exteriores</h3>
+                <h3 className="text-2xl font-bold mb-1 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7)'}}>
+                  Espacios Exteriores
+                </h3>
                 <p className="text-base text-gray-700">Piscinas, patios y jardines</p>
               </div>
               <button
@@ -143,9 +145,10 @@ export function ProjectsSection() {
                 className="object-cover"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
               <div className="relative z-10 p-6 w-full text-left">
-                <h3 className="text-2xl font-bold mb-1 text-black">Obras Comerciales</h3>
+                <h3 className="text-2xl font-bold mb-1 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7)'}}>
+                  Obras Comerciales
+                </h3>
                 <p className="text-base text-gray-700">Locales, oficinas y espacios públicos</p>
               </div>
               <button

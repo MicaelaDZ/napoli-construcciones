@@ -66,8 +66,8 @@ export default function ComercialesPage() {
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-300"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                <span className="text-white font-semibold text-lg">{proyecto.titulo}</span>
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <span className="text-white font-semibold text-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.7)'}}>{proyecto.titulo}</span>
               </div>
             </div>
           </Link>
