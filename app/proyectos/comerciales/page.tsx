@@ -8,7 +8,7 @@ const proyectos = [
     id: 1,
     titulo: "Moka Café",
     imagenes: [
-      "/images/moka-frente.jpg",
+      "/images/locales/moka-frente.jpg",
     ],
   },
   {
