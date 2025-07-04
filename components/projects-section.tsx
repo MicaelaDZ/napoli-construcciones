@@ -57,52 +57,33 @@ export function ProjectsSection() {
   return (
     <section
       id="proyectos"
-      className="pt-10 relative"
+      className="pt-10 pb-20 bg-white relative"
     >
       <div className="container mx-auto px-4 relative z-10">
-        {/* Título de la sección */}
-        <div className="relative w-full rounded-2xl overflow-hidden shadow-xl min-h-[320px] flex items-center justify-center mb-16">
-          {/* Imagen de fondo desenfocada y oscurecida */}
-          <div className="absolute inset-0">
-            <img
-              src="/images/moka-frente.jpg"
-              alt="Nuestros Proyectos"
-              className="w-full h-full object-cover blur-sm brightness-75"
-              style={{ filter: 'blur(4px) brightness(0.7)' }}
-            />
-            <div className="absolute inset-0 bg-[#FFF9E5] opacity-80" />
-          </div>
-          {/* Contenido */}
-          <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16 md:py-24 w-full max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 drop-shadow-lg">Nuestros Proyectos</h2>
-            <p className="text-lg md:text-xl text-black leading-relaxed drop-shadow-md">
-              Descubre nuestras obras más destacadas y la calidad de nuestro trabajo en construcción residencial, espacios exteriores y obras comerciales.
-            </p>
-          </div>
-        </div>
-        
+        {/* Título destacado */}
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-black">Nuestros Proyectos</h2>
         {/* Projects Categories Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Construcción Residencial con carrusel */}
           <Link href="/proyectos/residencial" className="group cursor-pointer block">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white">
+            <div className="relative h-80 overflow-hidden rounded-2xl shadow-xl flex items-end justify-center bg-white transition-transform duration-300 group-hover:scale-105">
               <Image
                 src={residencialImages[currentResidencial].src}
                 alt={residencialImages[currentResidencial].alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-black">
-                <h3 className="text-2xl font-semibold mb-2">Construcción Residencial</h3>
-                <p className="text-sm text-gray-800">Obras en viviendas familiares</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
+              <div className="relative z-10 p-6 w-full text-left">
+                <h3 className="text-2xl font-bold mb-1 text-black">Construcción Residencial</h3>
+                <p className="text-base text-gray-700">Obras en viviendas familiares</p>
               </div>
             </div>
           </Link>
           {/* Espacios Exteriores con carrusel */}
           <Link href="/proyectos/exteriores" className="group cursor-pointer block">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white">
+            <div className="relative h-80 overflow-hidden rounded-2xl shadow-xl flex items-end justify-center bg-white transition-transform duration-300 group-hover:scale-105">
               {/* Carrusel */}
               <button
                 onClick={(e) => { e.preventDefault(); handlePrevExterior(); }}
@@ -116,13 +97,13 @@ export function ProjectsSection() {
                 src={exteriorImages[currentExterior].src}
                 alt={exteriorImages[currentExterior].alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-black">
-                <h3 className="text-2xl font-semibold mb-2">Espacios Exteriores</h3>
-                <p className="text-sm text-gray-800">Piscinas, patios y jardines</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
+              <div className="relative z-10 p-6 w-full text-left">
+                <h3 className="text-2xl font-bold mb-1 text-black">Espacios Exteriores</h3>
+                <p className="text-base text-gray-700">Piscinas, patios y jardines</p>
               </div>
               <button
                 onClick={(e) => { e.preventDefault(); handleNextExterior(); }}
@@ -145,7 +126,7 @@ export function ProjectsSection() {
           </Link>
           {/* Obras Comerciales con carrusel */}
           <Link href="/proyectos/comerciales" className="group cursor-pointer block">
-            <div className="relative h-64 overflow-hidden rounded-lg shadow-lg flex items-center justify-center bg-white">
+            <div className="relative h-80 overflow-hidden rounded-2xl shadow-xl flex items-end justify-center bg-white transition-transform duration-300 group-hover:scale-105">
               {/* Carrusel */}
               <button
                 onClick={(e) => { e.preventDefault(); handlePrevCommercial(); }}
@@ -159,13 +140,13 @@ export function ProjectsSection() {
                 src={commercialImages[currentCommercial].src}
                 alt={commercialImages[currentCommercial].alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                className="object-cover"
                 style={{objectPosition: 'center'}}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-black">
-                <h3 className="text-2xl font-semibold mb-2">Obras Comerciales</h3>
-                <p className="text-sm text-gray-800">Locales, oficinas y espacios públicos</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/40 to-transparent" />
+              <div className="relative z-10 p-6 w-full text-left">
+                <h3 className="text-2xl font-bold mb-1 text-black">Obras Comerciales</h3>
+                <p className="text-base text-gray-700">Locales, oficinas y espacios públicos</p>
               </div>
               <button
                 onClick={(e) => { e.preventDefault(); handleNextCommercial(); }}

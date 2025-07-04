@@ -15,7 +15,7 @@ export function Header() {
             <Link href="/" className="text-white hover:text-yellow-500 transition-colors">
               Inicio
             </Link>
-            <Link href="#proyectos" className="text-white hover:text-yellow-500 transition-colors">
+            <Link href="/#proyectos" className="text-white hover:text-yellow-500 transition-colors">
               Proyectos
             </Link>
             <Link href="#nosotros" className="text-white hover:text-yellow-500 transition-colors">

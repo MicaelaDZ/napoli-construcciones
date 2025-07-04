@@ -13,6 +13,8 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
+        {/* Degradado inferior */}
+        <div className="absolute inset-x-0 bottom-0 h-32 pointer-events-none" style={{background: "linear-gradient(to bottom, rgba(0,0,0,0) 0%, #FAF7F2 100%)"}} />
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
