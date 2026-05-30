@@ -1,7 +1,4 @@
-"use client"
-
-import Image from "next/image"
-import Link from "next/link"
+import { ProjectGallery } from "@/components/project-gallery"
 
 const proyectos = [
   {
@@ -26,33 +23,6 @@ const proyectos = [
 
 export default function ProyectosResidenciales() {
   return (
-    <div className="min-h-screen bg-white py-16 px-4">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 mt-12 text-black">
-        Nuestros Proyectos Residenciales
-      </h1>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {proyectos.map((proyecto) =>
-          proyecto.imagenes.map((imagen, idx) => (
-            <Link
-              key={`${proyecto.id}-${idx}`}
-              href={`/proyectos/residencial/${proyecto.id}`}
-              className="block group"
-            >
-              <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src={imagen}
-                  alt={proyecto.titulo}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                  <span className="text-white font-semibold text-lg">{proyecto.titulo}</span>
-                </div>
-              </div>
-            </Link>
-          ))
-        )}
-      </div>
-    </div>
+    <ProjectGallery title="Construcción Residencial" proyectos={proyectos} />
   )
 }

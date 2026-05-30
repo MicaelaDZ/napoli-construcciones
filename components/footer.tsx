@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Instagram, MapPin, Phone, Mail } from "lucide-react"
+import { Instagram, MapPin, Phone, Mail, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
@@ -56,24 +56,34 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col gap-2">
             <h3 className="font-bold uppercase tracking-wider mb-4 text-brand">
               Seguinos
             </h3>
+            <div className="flex flex-col gap-2">
             <a
-              href="#"
+              href="https://www.instagram.com/napoli_construcciones/" target="_blank"
               className="inline-flex items-center gap-2 text-white/80 hover:text-brand transition-colors text-sm"
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" />
               Instagram
             </a>
+            <a
+              href="https://www.linkedin.com/in/napoli-construcciones-integrales/" target="_blank"
+              className="inline-flex items-center gap-2 text-white/80 hover:text-brand transition-colors text-sm"
+              aria-label="LinkedIn"
+            >
+                  <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-white/70">
-            Copyright ©{new Date().getFullYear()} Napoli Construcciones. Todos los
+            Copyright ©{new Date().getFullYear()} Napoli - Construcciones Integrales. Todos los
             derechos reservados.
           </p>
           <p className="text-xs mt-2 text-brand font-medium uppercase tracking-wider">

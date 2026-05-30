@@ -9,9 +9,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Napoli Construcciones",
+  title: "Napoli Construcciones Integrales",
   description:
-    "Napoli Construcciones - Especialistas en construcción, obras y remodelaciones",
+    "Napoli Construcciones Integrales - Especialistas en construcción, obras y remodelaciones",
   icons: {
     icon: "/logo.ico",
   },

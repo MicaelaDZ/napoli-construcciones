@@ -124,14 +124,7 @@ export function ProjectsSection() {
           })}
         </div>
 
-        <div className="text-center">
-          <Link
-            href="/proyectos/residencial"
-            className="inline-block border-2 border-brand text-brand hover:bg-brand hover:text-black font-bold uppercase tracking-wider px-8 py-3 transition-colors"
-          >
-            Ver Todo
-          </Link>
-        </div>
+  
       </div>
     </section>
   )

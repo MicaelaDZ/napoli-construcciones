@@ -24,7 +24,7 @@ export function Header() {
         >
           <div className="relative w-12 h-12 md:w-14 md:h-14 shrink-0">
             <Image
-              src="/logo.ico"
+              src="/images/logo.jpg"
               alt="Napoli Construcciones"
               fill
               className="object-contain"
@@ -36,7 +36,7 @@ export function Header() {
               NAPOLI
             </span>
             <span className="block text-brand font-semibold text-xs md:text-sm tracking-widest uppercase">
-              Construcciones
+              Construcciones Integrales
             </span>
           </div>
         </Link>

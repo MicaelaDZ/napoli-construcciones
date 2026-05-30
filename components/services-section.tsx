@@ -3,17 +3,29 @@ import { SectionTitle } from "@/components/section-title"
 import { PenTool, Hammer, RefreshCw, Wrench } from "lucide-react"
 
 const services = [
-  { icon: PenTool, title: "Diseño", image: "/images/bloque-nosotros-1.jpg" },
+  {
+    icon: PenTool,
+    title: "Diseño",
+    image:
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+  },
   {
     icon: Hammer,
     title: "Construcción",
-    image: "/images/residenciales/residencial1-frente.jpg",
+    image:
+      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
   },
-  { icon: RefreshCw, title: "Remodelación", image: "/images/locales/moka-frente.jpg" },
+  {
+    icon: RefreshCw,
+    title: "Remodelación",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+  },
   {
     icon: Wrench,
     title: "Mantenimiento",
-    image: "/images/exteriores/exterior-frente.jpeg",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
   },
 ]
 
