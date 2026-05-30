@@ -8,19 +8,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function ProjectsSection() {
   const commercialImages = [
-    { src: "/images/moka-frente.jpg", alt: "Moka Café" },
-    { src: "/images/terrazas-frente.jpeg", alt: "Terrazas de Ezeiza" },
+    { src: "/images/locales/moka-frente.jpg", alt: "Moka Café" },
+    { src: "/images/locales/terrazas-frente.jpeg", alt: "Terrazas de Ezeiza" },
   ]
   const [currentCommercial, setCurrentCommercial] = useState(0)
 
   const exteriorImages = [
-    { src: "/images/exterior-frente.jpeg", alt: "Espacio Exterior 1" },
-    { src: "/images/exterior2-frente.jpg", alt: "Espacio Exterior 2" },
+    { src: "/images/exteriores/exterior-frente.jpeg", alt: "Espacio Exterior 1" },
+    { src: "/images/exteriores/exterior2-frente.jpg", alt: "Espacio Exterior 2" },
   ]
   const [currentExterior, setCurrentExterior] = useState(0)
 
   const residencialImages = [
-    { src: "/images/residencial1-frente.jpg", alt: "Residencial" },
+    { src: "/images/residenciales/residencial1-frente.jpg", alt: "Residencial" },
   ]
   const [currentResidencial] = useState(0)
 
@@ -126,7 +126,7 @@ export function ProjectsSection() {
 
         <div className="text-center">
           <Link
-            href="#proyectos"
+            href="/proyectos/residencial"
             className="inline-block border-2 border-brand text-brand hover:bg-brand hover:text-black font-bold uppercase tracking-wider px-8 py-3 transition-colors"
           >
             Ver Todo

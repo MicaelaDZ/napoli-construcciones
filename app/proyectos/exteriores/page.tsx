@@ -1,43 +1,37 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 const proyectos = [
   {
     id: 1,
-    titulo: "Casa Familiar Moderna",
+    titulo: "Piscina y Solarium",
     imagenes: [
-      "/images/residenciales/residencial1-frente.jpg",
-      "/images/residenciales/patio.jpg",
-      "/images/locales/moka-frente.jpg",
+      "/images/exterior-frente.jpeg",
+      "/images/patio.jpg",
+      "/images/hero-pool.jpg"
     ],
   },
   {
     id: 2,
-    titulo: "Renovación Completa",
+    titulo: "Jardín Moderno",
     imagenes: [
-      "/images/bloque-nosotros-1.jpg",
-      "/images/bloque-nosotros-2.jpg",
-      "/images/foto-espalda.jpg",
+      "/images/exterior2-frente.jpg",
+      "/images/terrazas-frente.jpeg",
+      "/images/foto-espalda.jpg"
     ],
-  },
-]
+  }
+];
 
-export default function ProyectosResidenciales() {
+export default function ExterioresPage() {
   return (
     <div className="min-h-screen bg-white py-16 px-4">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 mt-12 text-black">
-        Nuestros Proyectos Residenciales
-      </h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-black mt-12">Nuestros Espacios Exteriores</h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {proyectos.map((proyecto) =>
+        {proyectos.map((proyecto) => (
           proyecto.imagenes.map((imagen, idx) => (
-            <Link
-              key={`${proyecto.id}-${idx}`}
-              href={`/proyectos/residencial/${proyecto.id}`}
-              className="block group"
-            >
+            <Link key={proyecto.id + '-' + idx} href={`/proyectos/exteriores/${proyecto.id}`} className="block group">
               <div className="relative h-64 rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src={imagen}
@@ -51,8 +45,8 @@ export default function ProyectosResidenciales() {
               </div>
             </Link>
           ))
-        )}
+        ))}
       </div>
     </div>
-  )
-}
+  );
+} 

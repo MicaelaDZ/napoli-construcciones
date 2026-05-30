@@ -4,9 +4,17 @@ import { PenTool, Hammer, RefreshCw, Wrench } from "lucide-react"
 
 const services = [
   { icon: PenTool, title: "Diseño", image: "/images/bloque-nosotros-1.jpg" },
-  { icon: Hammer, title: "Construcción", image: "/images/residencial1-frente.jpg" },
-  { icon: RefreshCw, title: "Remodelación", image: "/images/moka-frente.jpg" },
-  { icon: Wrench, title: "Mantenimiento", image: "/images/exterior-frente.jpeg" },
+  {
+    icon: Hammer,
+    title: "Construcción",
+    image: "/images/residenciales/residencial1-frente.jpg",
+  },
+  { icon: RefreshCw, title: "Remodelación", image: "/images/locales/moka-frente.jpg" },
+  {
+    icon: Wrench,
+    title: "Mantenimiento",
+    image: "/images/exteriores/exterior-frente.jpeg",
+  },
 ]
 
 export function ServicesSection() {

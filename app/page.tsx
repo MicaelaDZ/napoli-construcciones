@@ -6,6 +6,7 @@ import { EssenceSection } from "@/components/essence-section"
 import { WhyUsSection } from "@/components/why-us-section"
 import { ServicesSection } from "@/components/services-section"
 import { ProjectsSection } from "@/components/projects-section"
+import { ClientsSection } from "@/components/clients-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -21,6 +22,7 @@ export default function HomePage() {
       <WhyUsSection />
       <ServicesSection />
       <ProjectsSection />
+      <ClientsSection />
       <ContactSection />
       <Footer />
       <WhatsAppButton />
