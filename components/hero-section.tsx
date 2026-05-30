@@ -1,68 +1,42 @@
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { SectionTitle } from "@/components/section-title"
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-start overflow-hidden bg-[#FAF7F2] pt-20">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center pt-[72px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-pool.jpg"
-          alt="Construcción de piscina - Napoli Construcciones"
+          alt="Construcción - Napoli Construcciones"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-black max-w-4xl mx-auto px-4 lg:px-8">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 py-20">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tight">
-            <span
-              className="block text-white drop-shadow-2xl"
-              style={{
-                textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.3)",
-              }}
-            >
-              Construimos tu futuro
-            </span>
-          </h1>
+          <SectionTitle
+            highlight="Construir"
+            rest="tu futuro"
+            className="text-white mb-8"
+          />
 
-          <p
-            className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl leading-relaxed font-medium text-white drop-shadow-lg"
-            style={{
-              textShadow: "1px 1px 3px rgba(0,0,0,0.7)",
-            }}
-          >
-            Más de 20 años de experiencia en el sector de la construcción, ofreciendo calidad y excelencia en cada
-            proyecto.
+          <p className="text-white/90 text-base md:text-lg leading-relaxed mb-8">
+            En cada ladrillo colocamos tu sueño, en cada cimiento depositamos tus esperanzas.
+            La construcción es un acto de creación y confianza en un futuro mejor. Cada paso
+            que damos es la materialización de tus metas. Con más de 20 años de dedicación y
+            experiencia, levantamos espacios que protegerán tus momentos más preciados.
+            Permítenos ser parte de tu camino: juntos construiremos un futuro sólido y lleno
+            de posibilidades.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#contacto">
-            <Button
-              size="lg"
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold px-8 py-4 text-lg rounded-md shadow-lg hover:shadow-xl transition-all duration-200 border-0"
-            >
-              Solicitar presupuesto
-            </Button>
-            </a>
-            <a href="#proyectos">
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-black text-white hover:bg-green-500 hover:text-white hover:border-yellow-500 px-8 py-4 text-lg font-bold rounded-md shadow-lg hover:shadow-xl transition-all duration-200 bg-transparent"
-              style={{
-                backgroundColor: "rgba(0, 0, 0, 0.4)",
-                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
-              }}
-            >
-              Ver proyectos
-            </Button>
-             </a>
+          <div className="border-l-4 border-brand pl-6">
+            <p className="text-brand font-bold text-lg">Napoli Construcciones</p>
+            <p className="text-white/70 text-sm uppercase tracking-wider">
+              Construcción y diseño
+            </p>
           </div>
         </div>
       </div>
