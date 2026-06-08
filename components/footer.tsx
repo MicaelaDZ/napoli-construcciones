@@ -83,11 +83,16 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-white/70">
-            Copyright ©{new Date().getFullYear()} Napoli - Construcciones Integrales. Todos los
-            derechos reservados.
+            Copyright © {new Date().getFullYear()}
           </p>
+          <p className="text-sm text-white/70 mt-1">
           <p className="text-xs mt-2 text-brand font-medium uppercase tracking-wider">
-            Diseño y Construcciones.
+          Napoli - Construcciones Integrales
+          </p>
+            
+          </p>
+          <p className="text-sm text-white/70 mt-1">
+            Todos los derechos reservados.
           </p>
         </div>
       </div>

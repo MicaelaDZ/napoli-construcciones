@@ -3,7 +3,7 @@ import { SectionTitle } from "@/components/section-title"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center pt-[72px] overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-[80px] md:pt-[72px] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-pool.jpg"
