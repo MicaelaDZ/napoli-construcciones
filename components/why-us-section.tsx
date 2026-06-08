@@ -26,11 +26,11 @@ export function WhyUsSection() {
                 <span className="font-semibold text-gray-800 uppercase text-sm tracking-wide">
                   {skill.label}
                 </span>
-                <span className="font-bold text-brand">{skill.value}%</span>
+                <span className="font-bold text-brand-red">{skill.value}%</span>
               </div>
               <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-brand rounded-full transition-all duration-700"
+                  className="h-full bg-brand-red rounded-full transition-all duration-700"
                   style={{ width: `${skill.value}%` }}
                 />
               </div>

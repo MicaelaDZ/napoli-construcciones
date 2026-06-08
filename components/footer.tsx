@@ -23,11 +23,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:napolidaniel@hotmail.com"
+                  href="mailto:napoliconstrucciones@gmail.com"
                   className="flex items-center gap-2 text-white/80 hover:text-brand transition-colors break-all"
                 >
                   <Mail className="w-4 h-4 text-brand shrink-0" />
-                  napolidaniel@hotmail.com
+                  napoliconstrucciones@gmail.com
                 </a>
               </li>
             </ul>
@@ -85,11 +85,8 @@ export function Footer() {
           <p className="text-sm text-white/70">
             Copyright © {new Date().getFullYear()}
           </p>
-          <p className="text-sm text-white/70 mt-1">
-          <p className="text-xs mt-2 text-brand font-medium uppercase tracking-wider">
-          Napoli - Construcciones Integrales
-          </p>
-            
+          <p className="text-sm text-brand font-medium uppercase tracking-wider mt-1">
+            Napoli - Construcciones Integrales
           </p>
           <p className="text-sm text-white/70 mt-1">
             Todos los derechos reservados.

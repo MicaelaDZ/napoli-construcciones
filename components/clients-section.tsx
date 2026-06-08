@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import { SectionTitle } from "@/components/section-title";
 
 const exampleClients = [
   { name: "Rock&Fellers", logo: "/images/locales/rock&fellers.jpg" },
@@ -38,7 +39,7 @@ export function ClientsSection() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
-        <h2 className="text-4xl font-bold text-center mb-8">Nuestros clientes</h2>
+        <SectionTitle highlight="Nuestros" rest="clientes" className="text-black mb-8 text-center" />
         <div ref={scrollRef} className="overflow-x-auto scrollbar-hide">
           <div
             className="flex gap-8 py-4 min-w-full scrollbar-hide"

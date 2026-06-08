@@ -8,6 +8,8 @@
   --color-foreground: var(--foreground);
   --color-brand: var(--brand);
   --color-brand-hover: var(--brand-hover);
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-hover: var(--brand-red-hover);
   --color-surface-dark: var(--surface-dark);
   --color-surface-darker: var(--surface-darker);
   --color-surface-muted: var(--surface-muted);
@@ -52,6 +54,8 @@
   --radius: 0.375rem;
   --brand: #f5c518;
   --brand-hover: #d4a80f;
+  --brand-red: #dc2626;
+  --brand-red-hover: #b91c1c;
   --surface-dark: #3d3d3d;
   --surface-darker: #0a0a14;
   --surface-muted: #f5f5f5;

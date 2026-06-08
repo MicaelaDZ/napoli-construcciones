@@ -51,7 +51,7 @@ export function ContactSection() {
         email: form.email,
         telefono: "",
         mensaje: form.mensaje,
-        to_email: "napolidaniel@hotmail.com",
+        to_email: "napoliconstrucciones@gmail.com",
       }
       await emailjs.send(serviceId, templateId, templateParams, userId)
       setSuccess(true)
@@ -88,11 +88,11 @@ export function ContactSection() {
                   Dirección de correo electrónico
                 </h4>
                 <a
-                  href="mailto:napolidaniel@hotmail.com"
+                  href="mailto:napoliconstrucciones@gmail.com"
                   className="flex items-center gap-3 text-lg font-bold text-black hover:text-brand transition-colors break-all"
                 >
                   <Mail className="w-5 h-5 text-brand shrink-0" />
-                  napolidaniel@hotmail.com
+                  napoliconstrucciones@gmail.com
                 </a>
               </div>
             </div>

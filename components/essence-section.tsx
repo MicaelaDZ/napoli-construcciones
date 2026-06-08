@@ -31,8 +31,8 @@ export function EssenceSection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {values.map((item) => (
             <div key={item.title} className="text-center px-4">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand/15 mb-4">
-                <item.icon className="w-8 h-8 text-brand" strokeWidth={2} />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-red/10 mb-4">
+                <item.icon className="w-8 h-8 text-brand-red" strokeWidth={2} />
               </div>
               <h3 className="text-sm md:text-base font-semibold text-gray-800 leading-snug">
                 {item.title}
