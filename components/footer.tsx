@@ -23,11 +23,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:napoliconstrucciones@gmail.com"
+                  href="mailto:napoliconstrucciones@hotmail.com"
                   className="flex items-center gap-2 text-white/80 hover:text-brand transition-colors break-all"
                 >
                   <Mail className="w-4 h-4 text-brand shrink-0" />
-                  napoliconstrucciones@gmail.com
+                  napoliconstrucciones@hotmail.com
                 </a>
               </li>
             </ul>
@@ -46,6 +46,11 @@ export function Footer() {
               <li>
                 <Link href="#servicios" className="hover:text-brand transition-colors">
                   Servicios
+                </Link>
+              </li>
+              <li>
+                <Link href="#proyectos" className="hover:text-brand transition-colors">
+                  Proyectos
                 </Link>
               </li>
               <li>

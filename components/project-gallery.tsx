@@ -65,7 +65,7 @@ export function ProjectGallery({ title, proyectos }: ProjectGalleryProps) {
   }, [lightboxIndex, closeLightbox, showPrev, showNext])
 
   return (
-    <div className="min-h-screen bg-white py-16 px-4">
+    <div className="min-h-screen bg-white pt-28 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
         <Link
           href="/#proyectos"
