@@ -40,14 +40,18 @@ export function Header() {
   const solid = !isHome || scrolled || menuOpen
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 overflow-visible">
+      {/* Capa de fondo aparte: evita que backdrop-blur recorte el halo del logo en mobile */}
       <div
-        className={`relative flex items-center justify-between gap-4 min-h-[72px] md:min-h-[80px] px-4 sm:px-6 md:px-10 transition-[background-color,border-color,backdrop-filter] duration-300 ${
+        aria-hidden
+        className={`pointer-events-none absolute inset-0 transition-[background-color,border-color,backdrop-filter] duration-300 border-b ${
           solid
-            ? "bg-surface-darker/95 backdrop-blur-md border-b border-white/10"
-            : "bg-transparent border-b border-transparent"
+            ? "bg-surface-darker/95 backdrop-blur-md border-white/10"
+            : "bg-transparent border-transparent"
         }`}
-      >
+      />
+
+      <div className="relative flex items-center justify-between gap-4 min-h-[72px] md:min-h-[80px] px-4 sm:px-6 md:px-10">
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand" aria-hidden />
 
         <Link
@@ -55,15 +59,21 @@ export function Header() {
           className="flex items-center gap-2.5 sm:gap-3 min-w-0 group"
           onClick={() => setMenuOpen(false)}
         >
-          <div className="relative h-14 w-11 md:h-16 md:w-12 shrink-0">
-            <Image
-              src="/images/logo-nav.png"
-              alt="Napoli Construcciones"
-              fill
-              className="object-contain"
-              priority
-              sizes="64px"
+          <div className="logo-mark relative shrink-0">
+            <span
+              aria-hidden
+              className="logo-mark-glow pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
             />
+            <div className="relative h-12 w-9 overflow-hidden rounded-lg md:h-14 md:w-10 md:rounded-xl">
+              <Image
+                src="/images/logo.jpg"
+                alt="Napoli Construcciones"
+                fill
+                className="object-cover"
+                priority
+                sizes="56px"
+              />
+            </div>
           </div>
           <div className="leading-tight min-w-0">
             <span className="block text-brand font-extrabold text-base sm:text-lg md:text-xl tracking-[0.14em]">
