@@ -10,8 +10,16 @@ import { ClientsSection } from "@/components/clients-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { DRIVE_FOLDERS, listDriveImages } from "@/lib/drive-albums"
 
-export default function HomePage() {
+export const revalidate = 300
+
+export default async function HomePage() {
+  const [particularFromDrive, commercialFromDrive] = await Promise.all([
+    listDriveImages(DRIVE_FOLDERS.particulares),
+    listDriveImages(DRIVE_FOLDERS.comerciales),
+  ])
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -21,7 +29,10 @@ export default function HomePage() {
       <EssenceSection />
       <WhyUsSection />
       <ServicesSection />
-      <ProjectsSection />
+      <ProjectsSection
+        particularFromDrive={particularFromDrive}
+        commercialFromDrive={commercialFromDrive}
+      />
       <ClientsSection />
       <ContactSection />
       <Footer />

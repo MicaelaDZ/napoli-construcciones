@@ -6,55 +6,59 @@ import { useState } from "react"
 import { SectionTitle } from "@/components/section-title"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-export function ProjectsSection() {
+type AlbumImage = { src: string; alt: string }
+
+export function ProjectsSection({
+  particularFromDrive = [],
+  commercialFromDrive = [],
+}: {
+  particularFromDrive?: AlbumImage[]
+  commercialFromDrive?: AlbumImage[]
+}) {
   const commercialImages = [
+    { src: "/images/locales/nucha-frente.jpg", alt: "Nucha Café" },
+    { src: "/images/locales/moka-vidriera.jpg", alt: "Moka Café" },
     { src: "/images/locales/moka-frente.jpg", alt: "Moka Café" },
     { src: "/images/locales/terrazas-frente.jpeg", alt: "Terrazas de Ezeiza" },
   ]
   const [currentCommercial, setCurrentCommercial] = useState(0)
 
-  const exteriorImages = [
-    { src: "/images/exteriores/exterior-frente.jpeg", alt: "Espacio Exterior 1" },
-    { src: "/images/exteriores/exterior2-frente.jpg", alt: "Espacio Exterior 2" },
+  const particularImages = [
+    { src: "/images/particulares/particular-0164.jpg", alt: "Interior particular" },
+    { src: "/images/particulares/particular-0167.jpg", alt: "Interior particular" },
+    { src: "/images/residenciales/residencial1-frente.jpg", alt: "Interior residencial" },
+    { src: "/images/residenciales/patio.jpg", alt: "Patio" },
+    { src: "/images/exteriores/exterior-frente.jpeg", alt: "Piscina" },
+    { src: "/images/exteriores/exterior2-frente.jpg", alt: "Espacio exterior" },
+    { src: "/images/hero-pool.jpg", alt: "Piscina" },
+    { src: "/images/foto-espalda.jpg", alt: "Obra particular" },
   ]
-  const [currentExterior, setCurrentExterior] = useState(0)
-
-  const residencialImages = [
-    { src: "/images/residenciales/residencial1-frente.jpg", alt: "Residencial" },
-  ]
-  const [currentResidencial] = useState(0)
+  const [currentParticular, setCurrentParticular] = useState(0)
+  const particularSlides = [...particularFromDrive, ...particularImages]
+  const commercialSlides = [...commercialFromDrive, ...commercialImages]
 
   const projects = [
     {
-      title: "Construcción Residencial",
-      subtitle: "Obras en viviendas familiares",
-      href: "/proyectos/residencial",
-      images: residencialImages,
-      current: currentResidencial,
-      onPrev: undefined,
-      onNext: undefined,
-    },
-    {
-      title: "Espacios Exteriores",
-      subtitle: "Piscinas, patios y jardines",
-      href: "/proyectos/exteriores",
-      images: exteriorImages,
-      current: currentExterior,
+      title: "Particulares",
+      subtitle: "Espacios interiores y exteriores",
+      href: "/proyectos/particulares",
+      images: particularSlides,
+      current: currentParticular,
       onPrev: () =>
-        setCurrentExterior((p) => (p === 0 ? exteriorImages.length - 1 : p - 1)),
+        setCurrentParticular((p) => (p === 0 ? particularSlides.length - 1 : p - 1)),
       onNext: () =>
-        setCurrentExterior((p) => (p === exteriorImages.length - 1 ? 0 : p + 1)),
+        setCurrentParticular((p) => (p === particularSlides.length - 1 ? 0 : p + 1)),
     },
     {
       title: "Obras Comerciales",
       subtitle: "Locales, oficinas y espacios públicos",
       href: "/proyectos/comerciales",
-      images: commercialImages,
+      images: commercialSlides,
       current: currentCommercial,
       onPrev: () =>
-        setCurrentCommercial((p) => (p === 0 ? commercialImages.length - 1 : p - 1)),
+        setCurrentCommercial((p) => (p === 0 ? commercialSlides.length - 1 : p - 1)),
       onNext: () =>
-        setCurrentCommercial((p) => (p === commercialImages.length - 1 ? 0 : p + 1)),
+        setCurrentCommercial((p) => (p === commercialSlides.length - 1 ? 0 : p + 1)),
     },
   ]
 
@@ -73,7 +77,7 @@ export function ProjectsSection() {
           estructuras metálicas, departamentos llave en mano, remodelaciones y mucho más.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-2 gap-6 mb-10 max-w-5xl mx-auto">
           {projects.map((project) => {
             const img = project.images[project.current]
             return (
@@ -99,6 +103,7 @@ export function ProjectsSection() {
                   src={img.src}
                   alt={img.alt}
                   fill
+                  unoptimized={img.src.startsWith("http")}
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

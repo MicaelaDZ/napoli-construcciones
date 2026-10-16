@@ -13,10 +13,11 @@ type Proyecto = {
 
 type ProjectGalleryProps = {
   title: string
+  subtitle?: string
   proyectos: Proyecto[]
 }
 
-export function ProjectGallery({ title, proyectos }: ProjectGalleryProps) {
+export function ProjectGallery({ title, subtitle, proyectos }: ProjectGalleryProps) {
   const galleryImages = useMemo(
     () =>
       proyectos.flatMap((proyecto) =>
@@ -75,9 +76,14 @@ export function ProjectGallery({ title, proyectos }: ProjectGalleryProps) {
           Volver a proyectos
         </Link>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-black">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-black">
           {title}
         </h1>
+        {subtitle ? (
+          <p className="text-center text-gray-600 mt-4 mb-12">{subtitle}</p>
+        ) : (
+          <div className="mb-12" />
+        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
@@ -92,6 +98,7 @@ export function ProjectGallery({ title, proyectos }: ProjectGalleryProps) {
                 src={image.src}
                 alt={image.alt}
                 fill
+                unoptimized={image.src.startsWith("http")}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
@@ -144,6 +151,7 @@ export function ProjectGallery({ title, proyectos }: ProjectGalleryProps) {
                 src={galleryImages[lightboxIndex].src}
                 alt={galleryImages[lightboxIndex].alt}
                 fill
+                unoptimized={galleryImages[lightboxIndex].src.startsWith("http")}
                 className="object-contain"
                 sizes="100vw"
                 priority
